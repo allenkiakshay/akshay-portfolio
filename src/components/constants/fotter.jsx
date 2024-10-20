@@ -1,23 +1,53 @@
-
 const Fotter = () => {
   return (
     <div className="relative flex justify-center items-center w-[100vw] h-auto p-2 sm:p-4 md:p-6 lg:p-8">
-      <div className="relative flex justify-between items-center lg:w-[50%] md:w-[60%] sm:w-[70%] w-[80%] h-auto md:p-2 md:px-16">
-        <div className="relative flex gap-4 items-start justify-between font-light md:font-normal w-full h-auto  border-t-2 p-8">
-          <div className="relative flex flex-col justify-start items-start gap-4 w-1/3 text-gray-500">
+      <div className="relative flex justify-between items-center lg:w-[50%] md:w-[60%] sm:w-[70%] w-[80%] h-auto md:p-2 md:px-16 md:top-0 top-10">
+        <div className="relative md:flex-row flex-col flex gap-8 md:gap-4 items-start justify-between font-light md:font-normal w-full h-auto  border-t-2 md:p-8 pt-6">
+          <div className="relative flex flex-col justify-start items-start gap-4 md:w-1/3 text-gray-500">
             <a className="text-lg">Home</a>
             <a className="text-lg">Blog</a>
             <a className="text-lg">Projects</a>
+            <a className="text-lg" target="_blank" href="/Allenki Akshay.pdf">
+              Resume
+            </a>
           </div>
-          <div className="relative flex flex-col justify-start items-start gap-4  w-1/3 text-gray-500">
-            <a className="text-lg">Instagram</a>
-            <a className="text-lg">Twitter</a>
-            <a className="text-lg">LinkedIn</a>
-            <a className="text-lg">GitHub</a>
+          <div className="relative flex flex-col justify-start items-start gap-4  md:w-1/3 text-gray-500">
+            <a
+              className="text-lg"
+              target="_blank"
+              href="https://www.instagram.com/allenki_akshay/"
+            >
+              Instagram
+            </a>
+            <a
+              className="text-lg"
+              href="https://twitter.com/AkshayAllenki"
+              target="_blank"
+            >
+              Twitter
+            </a>
+            <a
+              className="text-lg"
+              target="_blank"
+              href="https://www.linkedin.com/in/allenki-akshay/"
+            >
+              LinkedIn
+            </a>
+            <a
+              className="text-lg"
+              target="_blank"
+              href="https://github.com/allenkiakshay"
+            >
+              GitHub
+            </a>
           </div>
-          <div className="relative flex flex-col justify-start items-start gap-4 w-1/3 text-gray-500">
-            <a className="text-lg">+91 63017 03596</a>
-            <a className="text-lg">allenkiakshay8322@gmail.com</a>
+          <div className="relative flex flex-col justify-start items-start gap-4 md:w-1/3 text-gray-500">
+            <a className="text-lg" href="tel:+916301703596">
+              +91 63017 03596
+            </a>
+            <a className="text-lg" href="mailto:allenkiakshay8322@gmail.com">
+              allenkiakshay8322@gmail.com
+            </a>
             <a
               href="https://www.buymeacoffee.com/allenkiakshay"
               target="_blank"
