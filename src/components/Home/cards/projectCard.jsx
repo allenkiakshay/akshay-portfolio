@@ -1,11 +1,4 @@
-const ProjectCard = ({
-  title,
-  githubUrl,
-  liveUrl,
-  description,
-  techStack,
-  imageUrl,
-}) => {
+const ProjectCard = ({ title, urls, description, techStack, imageUrl }) => {
   return (
     <div className="border-2 rounded-lg shadow-lg m-4 w-full sm:w-[90%] md:w-[75%] lg:w-[50%] flex flex-col md:flex-row p-4">
       {/* Left Side: Image */}
@@ -26,24 +19,17 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-4 flex space-x-4">
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            GitHub
-          </a>
-          {liveUrl ? (
+          {urls?.map((url, index) => (
             <a
-              href={liveUrl}
+              key={index}
+              href={url.url}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              Link
+              {url.name}
             </a>
-          ) : null}
+          ))}
         </div>
       </div>
     </div>
