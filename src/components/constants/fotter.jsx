@@ -42,9 +42,6 @@ const Fotter = () => {
             </a>
           </div>
           <div className="relative flex flex-col justify-start items-start gap-4 md:w-1/3 text-gray-500">
-            <a className="text-lg" href="tel:+916301703596">
-              +91 63017 03596
-            </a>
             <a className="text-lg" href="mailto:allenkiakshay8322@gmail.com">
               allenkiakshay8322@gmail.com
             </a>
