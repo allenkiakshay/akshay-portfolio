@@ -3,7 +3,7 @@ import ExperienceCard from "./cards/experienceCard";
 const Experience = ({ count }) => {
   const experienceList = [
     {
-      title: "Machine Learning Intern",
+      title: "Software Developer Intern",
       company: "Indian Institute of Technology, Bombay",
       duration: "May 2023 - May 2024",
       description:
@@ -17,12 +17,12 @@ const Experience = ({ count }) => {
       duration: "SEP 2023 - NA",
       description:
         "Developed Official Website of VIT-AP University. Worked on developing web applications using Latest Technologies. Contributed to improving the performance of the app and optimizing the database queries.Deployed the website on AWS.",
-      // techStack: "Next.js, Tailwind CSS, Stripe",
+      techStack: "Next.js, Tailwind CSS, Strapi.js, AWS, Postgres SQL",
     },
     {
       title: "Software Developer Intern",
       company: "TimeseraErp Software Solutions",
-      duration: "May 2024 - NA",
+      duration: "May 2024 - Dec 2024",
       description:
         "Worked on Backend Development of the company's Products. Developed and maintained the backend of the company's software platforms, ensuring responsive design and smooth user experience.Worked on Devops and CI/CD pipelines.",
       techStack: "Next.js, Angular, MS SQL, Microsoft Azure",
