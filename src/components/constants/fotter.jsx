@@ -49,7 +49,7 @@ const Fotter = () => {
             <a className="text-lg" href="mailto:allenkiakshay8322@gmail.com">
               allenkiakshay8322@gmail.com
             </a>
-            <a
+            {/* <a
               href="https://www.buymeacoffee.com/allenkiakshay"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const Fotter = () => {
                 alt="Buy Me A Coffee"
                 style={{ height: "60px", width: "217px" }}
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

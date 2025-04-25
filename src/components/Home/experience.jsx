@@ -14,7 +14,7 @@ const Experience = ({ count }) => {
     {
       title: "Software Developer Intern",
       company: "VIT-AP University",
-      duration: "SEP 2023 - NA",
+      duration: "SEP 2023 - SEP 2024",
       description:
         "Developed Official Website of VIT-AP University. Worked on developing web applications using Latest Technologies. Contributed to improving the performance of the app and optimizing the database queries.Deployed the website on AWS.",
       techStack: "Next.js, Tailwind CSS, Strapi.js, AWS, Postgres SQL",
@@ -30,7 +30,7 @@ const Experience = ({ count }) => {
     {
       title: "Software Developer Intern",
       company: "Navigate Labs AI",
-      duration: "SEP 2024 - NA",
+      duration: "SEP 2024 - FEB 2025",
       description:
         "Developing a AI based code editor that can help developers to write code faster and more efficiently. Worked on developing web applications using Latest Technologies.",
       // techStack: "Next.js, Tailwind CSS, Stripe",
@@ -57,7 +57,8 @@ const Experience = ({ count }) => {
 
   return (
     <div className="relative flex flex-col items-center w-[100vw] h-auto p-4">
-      <h1 className="text-4xl font-bold mb-8">Experience</h1>
+      <h1 className="text-4xl font-bold">Experience</h1>
+      <p className="text-lg text-center mb-4">Count: {experienceList.length}</p>
       {displayedExperiences.map((experience, index) => (
         <ExperienceCard
           key={index}
