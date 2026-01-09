@@ -9,7 +9,7 @@ const Page = () => {
     <>
       <Navbar />
       <Info />
-      <Projects count={2} />
+      <Projects count={3} />
       <Experience count={2} />
       <Fotter />
     </>

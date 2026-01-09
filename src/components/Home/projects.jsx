@@ -37,6 +37,13 @@ const Projects = ({ count }) => {
       imageUrl: "/projects/vitap-website.avif",
     },
     {
+      title: "APCID Examination Portal",
+      links: [],
+      description: "Developed a comprehensive online examination portal for AP Police Computer Instructor entrance exam. Features secure authentication via hall ticket and DOB, initial typing speed test, document submission system for Word, Excel, and PowerPoint files, and automated result generation with detailed reports stored in database.",
+      techStack: "Next.js, React.js, Node.js, Express.js, MongoDB, Multer, JWT Authentication",
+      imageUrl: "/projects/apcid/image_1.png",
+    },
+    {
       title: "VITopia Website",
       links: [
         {
@@ -92,9 +99,16 @@ const Projects = ({ count }) => {
   const displayedProjects = count ? projectList.slice(0, count) : projectList;
 
   return (
-    <div className="relative flex flex-col items-center w-[100vw] h-auto p-4">
-      <h1 className="text-4xl font-bold">Projects</h1>
-      <p className="text-lg text-center mb-8">Count: {projectList.length}</p>
+    <div className="relative flex flex-col items-center w-[100vw] h-auto p-4 py-8">
+      <div className="text-center mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+          Projects
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-400">
+          Showcasing {count ? displayedProjects.length : projectList.length} of {projectList.length} projects
+        </p>
+      </div>
+      
       {displayedProjects.map((project, index) => (
         <ProjectCard
           key={index}
@@ -107,8 +121,24 @@ const Projects = ({ count }) => {
       ))}
 
       {count && (
-        <a href="/projects" className="font-medium mt-4 hover:underline">
-          View More
+        <a 
+          href="/projects" 
+          className="group inline-flex items-center gap-2 px-6 py-3 mt-8 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+        >
+          View All Projects
+          <svg
+            className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
         </a>
       )}
     </div>
