@@ -66,7 +66,7 @@ const Fotter = () => {
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
               Full Stack Developer passionate about creating elegant solutions to complex problems.
-              Let's build something amazing together.
+              Let&apos;s build something amazing together.
             </p>
             
             {/* Social Icons - Larger */}
