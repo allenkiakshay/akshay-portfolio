@@ -38,10 +38,15 @@ const Projects = ({ count }) => {
     },
     {
       title: "APCID Examination Portal",
-      links: [],
-      description: "Developed a comprehensive online examination portal for AP Police Computer Instructor entrance exam. Features secure authentication via hall ticket and DOB, initial typing speed test, document submission system for Word, Excel, and PowerPoint files, and automated result generation with detailed reports stored in database.",
-      techStack: "Next.js, React.js, Node.js, Express.js, MongoDB, Multer, JWT Authentication",
-      imageUrl: "/projects/apcid/image_1.png",
+      links: [
+        {
+          name: "GitHub",
+          url: "https://github.com/allenkiakshay/apcid",
+        },
+      ],
+      description: "Developed a comprehensive online examination portal for AP Police Computer Instructor entrance exam. Features secure authentication via hall ticket and DOB, initial typing speed test, document submission system for Word, Excel, and PowerPoint files, automated file conversion to PDF with signatures, and detailed result generation stored in database.",
+      techStack: "Next.js, Prisma, PostgreSQL, NextAuth, Flask, TypeScript",
+      imageUrl: ["/projects/apcid/image_1.png", "/projects/apcid/image_2.png", "/projects/apcid/image_3.png"],
     },
     {
       title: "VITopia Website",

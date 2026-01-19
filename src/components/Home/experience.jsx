@@ -56,7 +56,7 @@ const Experience = ({ count }) => {
     : experienceList;
 
   return (
-    <div className="relative flex flex-col items-center w-[100vw] h-auto p-4 py-8 bg-gray-50 dark:bg-gray-900/50">
+    <div className="relative flex flex-col items-center w-[100vw] h-auto p-4 py-8">
       <div className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 bg-clip-text text-transparent">
           Experience

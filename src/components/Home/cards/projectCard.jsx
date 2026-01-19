@@ -3,14 +3,26 @@ import { useState } from "react";
 import Image from "next/image";
 
 const ProjectCard = ({ title, urls, description, techStack, imageUrl }) => {
+  const images = Array.isArray(imageUrl) ? imageUrl : [imageUrl];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  
+  const handlePrevImage = () => {
+    setImageLoaded(false);
+    setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+  
+  const handleNextImage = () => {
+    setImageLoaded(false);
+    setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <div className="group border-2 border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg hover:shadow-2xl m-3 w-full sm:w-[90%] md:w-[75%] lg:w-[55%] flex flex-col md:flex-row p-5 transition-all duration-500 hover:scale-[1.02] bg-white dark:bg-gray-800/50 backdrop-blur-sm">
       {/* Left Side: Image */}
       <div className="w-full md:w-1/3 mb-4 md:mb-0">
-        <div className="relative overflow-hidden rounded-xl aspect-video md:aspect-square">
+        <div className="relative overflow-hidden rounded-xl aspect-video md:aspect-square group/image">
           {!imageLoaded && !imageError && (
             <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 animate-pulse" />
           )}
@@ -25,11 +37,11 @@ const ProjectCard = ({ title, urls, description, techStack, imageUrl }) => {
             </div>
           ) : (
             <Image
-              src={imageUrl}
-              alt={title}
+              src={images[currentImageIndex]}
+              alt={`${title} - Image ${currentImageIndex + 1}`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className={`object-cover transition-all duration-500 group-hover:scale-110 ${
+              className={`object-cover transition-opacity duration-500 ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'
               }`}
               onLoad={() => setImageLoaded(true)}
@@ -37,6 +49,49 @@ const ProjectCard = ({ title, urls, description, techStack, imageUrl }) => {
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          
+          {/* Image Navigation - only show if multiple images */}
+          {images.length > 1 && (
+            <>
+              <button
+                onClick={handlePrevImage}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 z-10"
+                aria-label="Previous image"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={handleNextImage}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 z-10"
+                aria-label="Next image"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              
+              {/* Image indicators */}
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setImageLoaded(false);
+                      setCurrentImageIndex(index);
+                    }}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentImageIndex 
+                        ? 'bg-white w-6' 
+                        : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                    aria-label={`Go to image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
 
