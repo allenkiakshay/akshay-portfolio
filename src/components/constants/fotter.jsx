@@ -192,6 +192,18 @@ const Fotter = () => {
                     LinkedIn Profile
                   </a>
                 </li>
+                <li>
+                  <a href="/privacy" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 inline-flex items-center gap-2 group">
+                    <span className="w-0 h-0.5 bg-purple-600 dark:bg-purple-400 group-hover:w-3 transition-all duration-300"></span>
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/data-deletion" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 inline-flex items-center gap-2 group">
+                    <span className="w-0 h-0.5 bg-purple-600 dark:bg-purple-400 group-hover:w-3 transition-all duration-300"></span>
+                    Data Deletion
+                  </a>
+                </li>
               </ul>
             </div>
 
