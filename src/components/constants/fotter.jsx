@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Fotter = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -139,10 +140,10 @@ const Fotter = () => {
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="/" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 inline-flex items-center gap-2 group">
+                  <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 inline-flex items-center gap-2 group">
                     <span className="w-0 h-0.5 bg-blue-600 dark:bg-blue-400 group-hover:w-3 transition-all duration-300"></span>
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="/projects" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 inline-flex items-center gap-2 group">
@@ -196,6 +197,12 @@ const Fotter = () => {
                   <a href="/privacy" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 inline-flex items-center gap-2 group">
                     <span className="w-0 h-0.5 bg-purple-600 dark:bg-purple-400 group-hover:w-3 transition-all duration-300"></span>
                     Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 inline-flex items-center gap-2 group">
+                    <span className="w-0 h-0.5 bg-purple-600 dark:bg-purple-400 group-hover:w-3 transition-all duration-300"></span>
+                    Terms of Service
                   </a>
                 </li>
                 <li>

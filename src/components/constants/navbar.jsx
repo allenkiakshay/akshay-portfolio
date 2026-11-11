@@ -1,6 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -45,7 +46,7 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex relative items-center justify-between gap-6 lg:gap-8 font-medium">
-            <a 
+            <Link 
               className={`text-lg transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 relative group ${
                 isActive('/') ? 'text-blue-600 dark:text-blue-400' : ''
               }`} 
@@ -55,7 +56,7 @@ const Navbar = () => {
               <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transform origin-left transition-transform duration-300 ${
                 isActive('/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
               }`}></span>
-            </a>
+            </Link>
             <a 
               className={`text-lg transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 relative group ${
                 isActive('/blog') ? 'text-blue-600 dark:text-blue-400' : ''
@@ -116,7 +117,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-lg animate-fadeIn">
           <div className="flex flex-col p-4 gap-4">
-            <a
+            <Link
               className={`text-lg transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
                 isActive('/') ? 'text-blue-600 dark:text-blue-400 bg-gray-100 dark:bg-gray-800' : ''
               }`}
@@ -124,7 +125,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
-            </a>
+            </Link>
             <a
               className={`text-lg transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
                 isActive('/blog') ? 'text-blue-600 dark:text-blue-400 bg-gray-100 dark:bg-gray-800' : ''

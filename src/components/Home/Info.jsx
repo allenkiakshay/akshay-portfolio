@@ -6,6 +6,8 @@ const Info = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Runs once after mount to start the entrance animation.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsVisible(true);
   }, []);
 
